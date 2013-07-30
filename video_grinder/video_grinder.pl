@@ -54,13 +54,13 @@ sub read_timestamps {
   my ($filename, $videos_dir) = @_;
   my @todo;
   my $n = 0;
-  my $infile;
+  my ($infile, $extra_args);
 
   open(TIMES, "<$filename") or die "Couldn't open $filename: $!\n";
   while (<TIMES>) {
     chomp;
     if (/^[^\t]+/) {
-      $infile = $_;
+      ($infile, $extra_args) = split(/\t/);
       unless (-e $infile) {
         $infile = find_file($infile, $videos_dir);
         die "Couldn't find file \`$infile' in directory \`$videos_dir' nor any of its subdirectories\n" unless(defined($infile));
@@ -69,7 +69,7 @@ sub read_timestamps {
     } else {
       my (undef, $from, $to) = split(/\t/);
       next unless (defined($from) && defined($to));
-      push(@todo, { 'from' => $from, 'to' => $to, 'infile' => $infile, 'n' => $n });
+      push(@todo, { 'from' => $from, 'to' => $to, 'infile' => $infile, 'n' => $n, 'extra_args' => $extra_args });
     }
   }
   close(TIMES);
@@ -113,7 +113,7 @@ foreach my $todo (@todo) {
 
   my $duration = $to - $from;
 
-  my $cmd = ("ffmpeg -i '$todo->{infile}' -ss $from -t $duration $ffmpeg_args '$working_dir/$outfile'");
+  my $cmd = ("ffmpeg -i '$todo->{infile}' -ss $from -t $duration $ffmpeg_args $todo->{extra_args} '$working_dir/$outfile'");
   system($cmd." </dev/null");
   if ($? == -1) {
     print "failed to execute ffmpeg: $!\n";
