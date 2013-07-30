@@ -73,7 +73,7 @@ sub read_timestamps {
     }
   }
   close(TIMES);
-  return @todo;
+  return $n, @todo;
 }
 
 my $outfile_ext = 'mp3';
@@ -95,9 +95,9 @@ opendir(WD, $working_dir) || die "Couldn't open directory $working_dir: $!\n";
 my %existing_outfiles = map { $_ => undef } grep { $_ =~ /\.$outfile_ext$/ } readdir(WD);
 closedir(WD);
 
-my @todo = read_timestamps($timestamps_file, $videos_dir); 
+my ($nfiles, @todo) = read_timestamps($timestamps_file, $videos_dir); 
 
-my $outfile_fmt = sprintf($outfile_prefmt, length($todo[-1]->{n}));
+my $outfile_fmt = sprintf($outfile_prefmt, length($nfiles));
 foreach my $todo (@todo) {
   my $from = parse_time($todo->{from});
   my $to   = parse_time($todo->{to  });
