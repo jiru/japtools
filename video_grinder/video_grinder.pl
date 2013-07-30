@@ -113,7 +113,7 @@ foreach my $todo (@todo) {
 
   my $duration = $to - $from;
 
-  my $cmd = ("ffmpeg -i '$todo->{infile}' -ss $from -t $duration '$working_dir/$outfile' $ffmpeg_args");
+  my $cmd = ("ffmpeg -i '$todo->{infile}' -ss $from -t $duration $ffmpeg_args '$working_dir/$outfile'");
   system($cmd." </dev/null");
   if ($? == -1) {
     print "failed to execute ffmpeg: $!\n";
