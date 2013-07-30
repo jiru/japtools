@@ -23,3 +23,8 @@ How to use
 
         make Series/
 
+   Or use an alternate output directory.
+
+        echo "OUTPUT_DIR = /my/audio/grinds/" >> Makefile.local
+        mv Series.timestamps.txt /my/audio/grinds/
+        make /my/audio/grinds/Series/

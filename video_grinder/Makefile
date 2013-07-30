@@ -1,10 +1,12 @@
 
 VIDEOS_DIR = /path/to/all/your/videos
 FFMPEG_EXTRA_OPTS = -b:a 128k
-SUBDIRS = $(wildcard */)
+OUTPUT_DIR = .
 
 # Create a file named Makefile.local to override the latter variables
 -include Makefile.local
+
+SUBDIRS = $(wildcard $(OUTPUT_DIR)/*/)
 
 all: $(SUBDIRS)
 
