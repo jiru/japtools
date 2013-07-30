@@ -1,0 +1,33 @@
+[Elysium]The.Tatami.Galaxy.EP01(BD.720p.FLAC)[8E6A1A05].mkv
+	0	26
+	46	1:15.5
+	1:16	2:10
+	2:10	3:19
+	4:49	5:17
+	5:17	5:46
+	5:46	6:33.5
+	6:33.5	7:49
+	7:50	8:20.6
+	8:20.6	9:23
+	9:23	10:36.6
+	10:35	12:22.2
+	12:22.2	13:06.5
+	13:07	13:44
+	13:44	14:12
+	14:12	15:03.5
+	15:03.5	16:20
+	16:21.6	17:26
+	17:26	18:25.8
+	18:25.8	19:50.2
+	19:50.2	20:58.5
+	20:58.5	21:11.5
+[Elysium]The.Tatami.Galaxy.EP02(BD.720p.FLAC)[024A5D61].mkv
+[Elysium]The.Tatami.Galaxy.EP03(BD.720p.FLAC)[F7E9421E].mkv
+[Elysium]The.Tatami.Galaxy.EP04(BD.720p.FLAC)[66F0B8CB].mkv
+[Elysium]The.Tatami.Galaxy.EP05(BD.720p.FLAC)[FBBA94F6].mkv
+[Elysium]The.Tatami.Galaxy.EP06(BD.720p.FLAC)[1C301574].mkv
+[Elysium]The.Tatami.Galaxy.EP07(BD.720p.FLAC)[DF4858A0].mkv
+[Elysium]The.Tatami.Galaxy.EP08(BD.720p.FLAC)[FC8AB1FE].mkv
+[Elysium]The.Tatami.Galaxy.EP09(BD.720p.FLAC)[09D7245F].mkv
+[Elysium]The.Tatami.Galaxy.EP10(BD.720p.FLAC)[FE5A240E].mkv
+[Elysium]The.Tatami.Galaxy.EP11(BD.720p.FLAC)[55A7BBC5].mkv
